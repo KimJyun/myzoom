@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title myzoom
+        <link rel="shortcut icon" href="#">
+                //-favicon ico 404 error로 추가 -// 
+    body 
+        header 
+            h1 Hello MyZoom! 
+        main 
+            div#first_div
+                form
+                    input(placeholder="방 이름", required, type="text")
+                    button 방 참가하기 / 만들기
+                h4 현재 방
+                ul
+            div#room
+                h3
+                ul 
+                form#name
+                    input(placeholder="닉네임", required, type="text")
+                    button 닉네임 설정하기
+                form#msg
+                    input(placeholder="메시지", required, type="text")
+                    button 메시지 보내기
+                div#myStream
+                    video#myFace(autoplay,playsinline,width="400",height="400")
+                    button#mute 음소거하기
+                    button#camera 카메라끄기
+                    select#cameras
+                    
+                    video#otherFace(autoplay,playsinline,width="400",height="400")
+        script(src="/socket.io/socket.io.js")    
+        script(src="/public/js/app.js")
