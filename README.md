@@ -7,32 +7,32 @@
     npm i nodemon -D
     ```
     
-> Bable 설치
+> Bable 설치<br/>
     ```
     npm i @babel/core @babel/cli @babel/node @babel/preset-env -D
     ```
     
-> express 설치
+> express 설치<br/>
     ```
     npm i express
     ```
     
-> pug 설치
+> pug 설치<br/>
     ```
     npm i pug
     ```
 
-> ws library 설치
+> ws library 설치<br/>
     ```
     npm i ws
     ```
 
-> socket.io 설치
+> socket.io 설치<br/>
     ```
     npm i nodemon -D
     ```
     
-> 실행
+> 실행<br/>
     ```
     npm run dev
     ```
