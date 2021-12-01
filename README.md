@@ -2,7 +2,7 @@
 
 ## Installation
 
-> Nodemon 설치
+> Nodemon 설치<br/>
     ```
     npm i nodemon -D
     ```
@@ -28,11 +28,11 @@
     ```
 
 > socket.io 설치
-    '''
+    ```
     npm i nodemon -D
-    '''
+    ```
     
 > 실행
-    '''
+    ```
     npm run dev
-    '''
+    ```
