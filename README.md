@@ -12,7 +12,7 @@
     npm i @babel/core @babel/cli @babel/node @babel/preset-env -D
     ```
     
-> xpress 설치
+> express 설치
     ```
     npm i express
     ```
@@ -28,11 +28,11 @@
     ```
 
 > socket.io 설치
-    ```
-    npm i socket.io
-
-
+    '''
+    npm i nodemon -D
+    '''
+    
 > 실행
-    ```
+    '''
     npm run dev
-    ```
+    '''
