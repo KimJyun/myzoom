@@ -5,33 +5,62 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title myzoom
-        <link rel="shortcut icon" href="#">
+        link(rel="shortcut icon" href="#")
                 //-favicon ico 404 error로 추가 -// 
-    body 
-        header 
-            h1 Hello MyZoom! 
-        main 
-            div#first_div
-                form
-                    input(placeholder="방 이름", required, type="text")
-                    button 방 참가하기 / 만들기
-                h4 현재 방
-                ul
-            div#room
-                h3
-                ul 
-                form#name
-                    input(placeholder="닉네임", required, type="text")
-                    button 닉네임 설정하기
-                form#msg
-                    input(placeholder="메시지", required, type="text")
-                    button 메시지 보내기
-                div#myStream
-                    video#myFace(autoplay,playsinline,width="400",height="400")
-                    button#mute 음소거하기
-                    button#camera 카메라끄기
-                    select#cameras
-                    
-                    video#otherFace(autoplay,playsinline,width="400",height="400")
+        link(rel='stylesheet', href='../public/css/style.css')
+        link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css")
+    body
+        div#wrap
+            header 
+                img(src=`/public/img/myzoom.png`,width="100px")
+                h1 Hello MyZoom! 
+            main 
+                div#first_div
+                    form#name
+                        input.form-control.form-control-lg(placeholder="닉네임", required, type="text",width="200px")
+                        button.btn.btn-primary 닉네임 설정하기
+                        
+                    form#roomselect
+                        input.form-control.form-control-lg(placeholder="방 이름", required, type="text")
+                        button.btn.btn-primary 방 참가하기 / 만들기
+                    h4 현재 방
+                    ul
+                div#room
+                    h3
+                    textarea#chat.form-control(readonly)
+                    form#msg
+                        input.form-control.form-control-lg(placeholder="메시지", required, type="text")
+                        button.btn.btn-primary 메시지 보내기
+                    span#uploadarea
+                    form#file
+                        input(type="file",id="filebox")
+                        input(type="hidden",id="namebox")
+                        button.btn.btn-primary#upload 파일 보내기
+                    div#myStream
+                        video#myFace(autoplay,playsinline,width="300",height="300")
+                        video#otherFace(autoplay,playsinline,width="300",height="300")
+
+                        button.btn.btn-primary#mute 음소거하기
+                        button.btn.btn-primary#camera 카메라끄기
+                        select.form-control.form-control-sm#cameras
+
+
+                        button.btn.btn-primary#recording 녹화
+                        button.btn.btn-primary#recording-stop 녹화 중지
+                        a#recording-download
+                            button.btn.btn-primary 다운로드
+                        
+                        //- div#screen-sharing
+                        //-     button#sharing-start 화면 공유
+                        //-     button#sharing-stop 화면 공유 중지
+                        //-     video#myScreen(autoplay,playsinline,width="400",height="400")
+                        //-     video#sharing-video(autoplay,playsinline,width="400",height="400")
+                    form#filedownload
+                        ul
         script(src="/socket.io/socket.io.js")    
-        script(src="/public/js/app.js")
+        script(src="/public/js/socket.io-stream.js")
+        script(src="/public/js/download.js")
+        script(src="/public/js/app.js",)
+        script(src="/public/js/main.js")
+        script(src="/public/js/camera.js") 
+        script(src="/public/js/screen-share.js") 
