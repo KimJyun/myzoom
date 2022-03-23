@@ -80,9 +80,3 @@ Create your own Zoom using Node.js.
 
 [MIT License](http://khuhub.khu.ac.kr/myzoom/myzoom/blob/master/LICENSE)
 
-
-## Contact
-
-이용하시다가 궁금한 점이 있으시면 이쪽으로 연락 부탁드립니다.  
-조영호 - namespace@khu.ac.kr
-김지현 - jhkim0311@khu.ac.kr
